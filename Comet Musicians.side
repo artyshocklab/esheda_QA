@@ -1,0 +1,117 @@
+{
+  "id": "c7450663-368a-4af2-a2a9-72e34934dcfa",
+  "version": "2.0",
+  "name": "Comet Musicians",
+  "url": "https://www.cometmusicians.com/",
+  "tests": [{
+    "id": "3ab58d6d-417f-4d65-951b-79593cb01093",
+    "name": "Come Musicians - Artyshock - Search ",
+    "commands": [{
+      "id": "e118f59f-c857-440e-b977-a9638b8d29ee",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.cometmusicians.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a4fbea2-ad0b-4b21-b4fa-90fe22e61943",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dcf672cd-975d-4c54-a5b3-c363724fbd06",
+      "comment": "",
+      "command": "clickAt",
+      "target": "id=comp-l3umj2fn1label",
+      "targets": [
+        ["id=comp-l3umj2fn1label", "id"],
+        ["css=#comp-l3umj2fn1label", "css:finder"],
+        ["xpath=//p[@id='comp-l3umj2fn1label']", "xpath:attributes"],
+        ["xpath=//li[@id='comp-l3umj2fn1']/div/div/div/p", "xpath:idRelative"],
+        ["xpath=//div/div/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Comets')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d63047cc-7e18-4fa0-9c19-c1288a20f91f",
+      "comment": "COMETS - DJS assertion",
+      "command": "assertElementPresent",
+      "target": "id=comp-l3umj2fnmoreContainer0label",
+      "targets": [
+        ["id=comp-l3umj2fnmoreContainer0label", "id"],
+        ["css=#comp-l3umj2fnmoreContainer0label", "css:finder"],
+        ["xpath=//p[@id='comp-l3umj2fnmoreContainer0label']", "xpath:attributes"],
+        ["xpath=//li[@id='comp-l3umj2fnmoreContainer0']/a/div/div/p", "xpath:idRelative"],
+        ["xpath=//div/ul/li/a/div/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'DJs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "806e82b3-5f76-403a-b7fb-89fcede4e8c0",
+      "comment": "",
+      "command": "click",
+      "target": "id=comp-l3umj2fnmoreContainer1label",
+      "targets": [
+        ["id=comp-l3umj2fnmoreContainer1label", "id"],
+        ["css=#comp-l3umj2fnmoreContainer1label", "css:finder"],
+        ["xpath=//p[@id='comp-l3umj2fnmoreContainer1label']", "xpath:attributes"],
+        ["xpath=//li[@id='comp-l3umj2fnmoreContainer1']/a/div/div/p", "xpath:idRelative"],
+        ["xpath=//li[2]/a/div/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Producers')]", "xpath:innerText"]
+      ],
+      "value": "1000"
+    }, {
+      "id": "7c1105d7-32d8-44bc-800a-f787506670f3",
+      "comment": "",
+      "command": "clickAt",
+      "target": "css=#img_comp-li9bza5m__item1 > img",
+      "targets": [],
+      "value": "500"
+    }, {
+      "id": "663268f4-69d6-4177-b341-b1bcc8228a12",
+      "comment": "artyshock image assertion",
+      "command": "assertElementPresent",
+      "target": "css=#img_comp-l47fncq4 > img",
+      "targets": [
+        ["css=#img_comp-l47fncq4 > img", "css:finder"],
+        ["xpath=//img[@alt='artyshock no logo.jpg']", "xpath:img"],
+        ["xpath=//wow-image[@id='img_comp-l47fncq4']/img", "xpath:idRelative"],
+        ["xpath=//div[2]/wow-image/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "45dd6b64-0883-4e6d-8fdf-4346cf2cf2cb",
+      "comment": "Artyshock image text",
+      "command": "assertElementPresent",
+      "target": "css=#comp-l47fncqb > .font_0 > .wixui-rich-text__text > .wixui-rich-text__text",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6f4799c0-cac2-4f40-a48b-435d02f73a9f",
+      "comment": "Home button assertion",
+      "command": "assertElementPresent",
+      "target": "id=comp-l3umj2fn0label",
+      "targets": [
+        ["id=comp-l3umj2fn0label", "id"],
+        ["css=#comp-l3umj2fn0label", "css:finder"],
+        ["xpath=//p[@id='comp-l3umj2fn0label']", "xpath:attributes"],
+        ["xpath=//li[@id='comp-l3umj2fn0']/a/div/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": "1000"
+    }]
+  }],
+  "suites": [{
+    "id": "6099ca2b-628d-4901-931e-d8fb3f5b55d2",
+    "name": "Artyshock",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["3ab58d6d-417f-4d65-951b-79593cb01093"]
+  }],
+  "urls": ["https://www.beatport.com/", "https://www.cometmusicians.com/"],
+  "plugins": []
+}

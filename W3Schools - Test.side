@@ -1,0 +1,103 @@
+{
+  "id": "09a41cd9-2e9b-4447-a98a-d57ec533ebe4",
+  "version": "2.0",
+  "name": "W3Schools - Test",
+  "url": "https://www.w3schools.com/",
+  "tests": [{
+    "id": "5208bdc9-7392-428b-aca8-bf6b7046e7aa",
+    "name": "Run \"For Loop\" Example",
+    "commands": [{
+      "id": "a38cbc28-5cb8-48ec-8c6a-c636ad6948c5",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.w3schools.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e3dba6d-a40b-40f2-b379-97bbed8dcb88",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0011106c-698f-4736-b90b-3951868c5829",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=PYTHON",
+      "targets": [
+        ["linkText=PYTHON", "linkText"],
+        ["css=.ga-nav:nth-child(7)", "css:finder"],
+        ["xpath=//a[contains(text(),'PYTHON')]", "xpath:link"],
+        ["xpath=//div[@id='subtopnav']/a[5]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/python/default.asp')])[3]", "xpath:href"],
+        ["xpath=//body/div[3]/a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'PYTHON')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ee81835-f9c1-40cb-b613-ffca9a51fb2d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Python For Loops",
+      "targets": [
+        ["linkText=Python For Loops", "linkText"],
+        ["css=#leftmenuinnerinner > a:nth-child(26)", "css:finder"],
+        ["xpath=//a[contains(text(),'Python For Loops')]", "xpath:link"],
+        ["xpath=//div[@id='leftmenuinnerinner']/a[19]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'python_for_loops.asp')]", "xpath:href"],
+        ["xpath=//div/div/a[19]", "xpath:position"],
+        ["xpath=//a[contains(.,'Python For Loops')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6761ca4f-5f9e-40dc-b32d-f6db6756e486",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Try it Yourself »",
+      "targets": [
+        ["linkText=Try it Yourself »", "linkText"],
+        ["css=.w3-example:nth-child(9) > .w3-btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Try it Yourself »')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'trypython.asp?filename=demo_for')]", "xpath:href"],
+        ["xpath=//div[5]/div/div/div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Try it Yourself »')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win1518",
+      "windowTimeout": 2000
+    }, {
+      "id": "d668aff6-f278-4624-ad9f-2fe7e3b5580a",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win1518}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "95917b59-b1cd-46f0-8708-1c702d5081c7",
+      "comment": "",
+      "command": "click",
+      "target": "id=runbtn",
+      "targets": [
+        ["id=runbtn", "id"],
+        ["css=#runbtn", "css:finder"],
+        ["xpath=//button[@id='runbtn']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Run ❯')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "fe74e595-a230-469d-806d-72a6f9eea0bd",
+    "name": "Python Examples Runs",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["5208bdc9-7392-428b-aca8-bf6b7046e7aa"]
+  }],
+  "urls": ["https://www.w3schools.com/"],
+  "plugins": []
+}
