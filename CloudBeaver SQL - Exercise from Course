@@ -219,9 +219,9 @@
 --where first_name like '%Y' or last_name like 'C%' 
 
 -- תשובה לשאלה 9
-select title,description
-from film f
-where description like '%Epic%' or description like '%Saga%' or description like '%Explorer%' or description like '%drama%'
+--select title,description
+--from film f
+--where description like '%Epic%' or description like '%Saga%' or description like '%Explorer%' or description like '%Drama%'
 
 
 
