@@ -1,0 +1,228 @@
+-- DROP SCHEMA public;
+
+--CREATE SCHEMA public AUTHORIZATION azure_pg_admin;
+--select -- תשובה לשאלה 1
+--customer_id,
+--first_name,
+--last_name,
+--store_id
+--from customer
+
+-- תשובה לשאלה 2
+--select film_id, title, release_year, rating
+--from film
+
+-- תשובה לשאלה 3
+--select rental_id,customer_id,staff_id,rental_date
+--from rental r
+--תשובה לשאלה 4
+--select actor_id,last_name
+--from actor 
+
+-- תשובה לשאלה 5
+--select *
+--from payment p order by payment_date desc
+
+-- תשובה לשאלה 6
+--select customer_id, rental_id
+--from rental r order by customer_id asc
+-- תשובה לשאלה 7
+--select *
+--from customer c limit 5
+-- תשובה לשאלה 8
+--select *
+--from actor a
+--order by first_name
+--limit 10
+-- תשובה לשאלה 9
+--select title, length, release_year
+--from film
+--order by length desc limit 10
+
+-- תשובה לשאלה 10
+--select title, length, rental_rate
+--from film
+--order by rental_rate desc limit 10
+
+
+
+-- PART B
+
+
+-- תשובה לשאלה 1
+--SELECT title,rental_rate,replacement_cost,
+--rental_rate + replacement_cost AS rental_plus_replacement
+--FROM film f
+
+-- תשובה לשאלה 2
+--select payment_id,amount,payment_date,
+--amount * 0.7 as amount_with_discount
+--from payment 
+
+-- תשובה לשאלה 3
+--select distinct customer_id 
+--from rental
+
+-- תשובה לשאלה 4
+--select rental_rate,rental_duration
+--from film
+--order by rental_rate,rental_duration asc 
+
+--תשובה לשאלה 5
+
+--select title, length,
+--case 
+--   when length < 80 then 'short'
+--   when length > 120 then 'long'
+--   when length between 80 and 120 then 'medium'
+--else 'null'
+--end as "film_length_category"
+--from film f
+
+-- תשובה לשאלה 6
+
+--select film_id,title,release_year,
+--case
+ -- when release_year >=2010 then '1 (new)'
+--  else '0 (old)'
+--end as "is_new"
+--from film f
+
+-- תשובה לשאלה 7
+--select *,
+ -- case 
+--  when release_year between 2006 and 2008 and rating in ('g', 'nc-17') then  1
+--  when release_year between 2009 and 2011 and rating in ('r', 'pg-13') then  2
+--  when release_year between 2012 and 2013 and rating in ('pg') then  3
+--  else  4
+--  end as "rel_yr_and_rating"
+--from film f
+
+-- תשובה לשאלה 8
+--select *,
+ -- case 
+ -- when return_date is not null then 'Yes'
+ -- else 'No'
+--  end as "returned"
+-- from rental r
+
+
+                    -- WHERE --
+
+-- תשובה לשאלה 1
+--select *
+  --from payment p
+  --where customer_id = 343
+
+-- תשובה לשאלה 2
+--select title
+  --from film f
+ -- where title = 'Airport'
+
+-- תשובה לשאלה 3
+--SELECT *
+--from customer c
+-- where last_name like 'm%'
+
+-- תשובה לשאלה 4
+--SELECT *
+--FROM film
+--WHERE rental_rate > 4.99
+
+-- תשובה לשאלה 5
+--select film_id,title,release_year,rating
+--from film f
+--where film_id < 100
+
+-- תשובה לשאלה 6
+--select title as "movie name"
+--from film f
+--where rating = 'R'
+
+-- תשובה לשאלה 7
+--select film_id, title, release_year, rating, rental_duration
+--from film
+--where rating in ('G', 'PG', 'R')
+
+-- תשובה לשאלה 8
+--select film_id, title, release_year, rating, rental_duration
+--from film
+--where rating not in ('G', 'PG', 'R')
+
+-- תשובה לשאלה 9
+--select title, length
+--from film
+--where length BETWEEN 80 AND 120
+
+-- תשובה לשאלה 10
+--select *
+--from rental
+--where rental_date >= '2021-07-01' and rental_date < '2021-08-01'
+
+-- תשובה לשאלה 11
+--select film_id, title, release_year, rating, rental_duration
+--from film
+--where rating = 'G' and (rental_duration <= 3 or rental_duration >= 6);
+
+-- תשובה לשאלה 12
+--select film_id, title, release_year, rating, rental_duration
+--from film
+--where title like '%Gold%'
+--order by release_year asc
+
+-- תשובה לשאלה 13
+--select film_id, title, release_year, rating, rental_duration
+--from film
+--where title not like '%Gold%'
+--order by release_year desc
+
+
+                --WHERE - EXRA --
+-- תשובה לשאלה 1
+--select title
+--from film
+--where special_features like '%Deleted Scenes%' or special_features like '%Behind the Scenes%'
+
+-- תשובה לשאלה 2
+--select title, release_year
+--from film
+--where rating in ('G','R')
+
+-- תשובה לשאלה 3
+--select * 
+--from film
+--where length between 60 and 90
+
+-- תשובה לשאלה 4
+--select title, length
+--from film f
+--where replacement_cost<20
+
+-- תשובה לשאלה 5
+--select last_name
+--from actor
+--where first_name = 'Adam'
+
+-- תשובה לשאלה 6
+--select first_name,last_name
+--from actor
+--where first_name like 'A%' or last_name like 'A%'
+
+-- תשובה לשאלה 7
+--select first_name,last_name
+--from actor
+--where first_name like 'J%' and last_name like '%S%'
+
+-- תשובה לשאלה 8
+--select first_name,last_name
+--from actor
+--where first_name like '%Y' or last_name like 'C%' 
+
+-- תשובה לשאלה 9
+select title,description
+from film f
+where description like '%Epic%' or description like '%Saga%' or description like '%Explorer%' or description like '%drama%'
+
+
+
+
